@@ -1,9 +1,12 @@
 from pydantic import BaseModel
+from app.schemas.allergy import Allergy
 
 
 class UserBase(BaseModel):
     username: str | None = None
     full_name: str | None = None
+
+    allergies: list[Allergy] | None = None
 
 
 class UserCreate(UserBase):
@@ -13,6 +16,10 @@ class UserCreate(UserBase):
 
 class UserIn(UserBase):
     username: str
+
+
+class UserAllergies(UserBase):
+    allergies: list[Allergy]
 
 
 class UserInDBBase(UserBase):
