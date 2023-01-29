@@ -1,6 +1,6 @@
-from app.db import get_db
-from app.schemas import UserCreate, User
 from app.crud import create_user
+from app.db import get_db
+from app.schemas import User, UserCreate
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
