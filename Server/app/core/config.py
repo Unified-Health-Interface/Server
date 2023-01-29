@@ -2,17 +2,12 @@ import os
 
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 
 class Settings:
     PROJECT_NAME = "UHI"
-    DATABASE_USERNAME = os.environ.get("DATABASE_USERNAME")
-    DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD")
-    SQLALCHEMY_DATABASE_URL = (
-        f"postgresql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@localhost/UHI"
-    )
+    SQLALCHEMY_DATABASE_URL = "sqlite:///./UHI.db"
 
 
 settings = Settings()
