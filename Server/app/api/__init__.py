@@ -1,5 +1,4 @@
-from app.api.endpoints import user
-from app.api.endpoints import allergy
+from app.api.endpoints import allergy, user
 from fastapi import APIRouter
 
 api_router = APIRouter()

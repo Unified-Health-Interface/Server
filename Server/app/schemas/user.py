@@ -1,5 +1,5 @@
-from pydantic import BaseModel
 from app.schemas.allergy import Allergy
+from pydantic import BaseModel
 
 
 class UserBase(BaseModel):

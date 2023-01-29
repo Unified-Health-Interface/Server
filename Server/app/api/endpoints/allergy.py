@@ -8,9 +8,7 @@ router = APIRouter()
 
 
 @router.post("/", response_model=Allergy)
-async def create(
-    *, db: Session = Depends(get_db), allergy: AllergyCreate
-):
+async def create(*, db: Session = Depends(get_db), allergy: AllergyCreate):
     # if db_user:
     #     raise HTTPException(
     #         status_code=400, detail="A user with this username already exists."
