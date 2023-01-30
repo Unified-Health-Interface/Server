@@ -14,4 +14,4 @@ class BasicHealth(Base):
     dob: Mapped[datetime.date] = mapped_column(Date)
     sex: Mapped[str] = mapped_column(String)
     blood_group: Mapped[str] = mapped_column(String)
-    username: Mapped[str] = mapped_column(ForeignKey("users.username"))
+    username: Mapped[str] = mapped_column(ForeignKey("users.username"), unique=True)
