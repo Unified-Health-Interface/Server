@@ -14,5 +14,5 @@ async def create(*, db: Session = Depends(get_db), vaccination: VaccinationCreat
 
 
 @router.get("/{username}", response_model=list[Vaccination])
-async def read(*, db: Session = Depends(get_db), username: str):
-    return read_user_vaccinations(db, username)
+async def read(*, db: Session = Depends(get_db), username: str, only_pending: bool = False):
+    return read_user_vaccinations(db, username, only_pending)
