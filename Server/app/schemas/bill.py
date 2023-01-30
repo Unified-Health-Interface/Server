@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 
 class BillBase(BaseModel):
+    hospital: str | None = None
     service: str | None = None
     amount: int | None = None
     due_date: datetime.date | None = None
@@ -11,6 +12,7 @@ class BillBase(BaseModel):
 
 
 class BillCreate(BillBase):
+    hospital: str
     service: str
     amount: int
     due_date: datetime.date
