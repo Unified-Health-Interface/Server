@@ -12,3 +12,4 @@ class User(Base):
     full_name: Mapped[str] = mapped_column(String, nullable=False)
 
     allergies: Mapped[list["Allergy"]] = relationship()
+    vaccinations: Mapped[list["Vaccination"]] = relationship()
