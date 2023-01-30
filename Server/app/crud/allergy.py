@@ -10,5 +10,5 @@ def create_allergy(db: Session, allergy: schemas.AllergyCreate):
     return db_allergy
 
 
-def read_user_allergies(db: Session, user: schemas.UserIn):
-    return db.query(models.Allergy).filter(models.Allergy.username == user.username).all()
+def read_user_allergies(db: Session, username: str):
+    return db.query(models.Allergy).filter(models.Allergy.username == username).all()

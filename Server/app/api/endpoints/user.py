@@ -1,4 +1,4 @@
-from app.crud import create_user, get_user, get_user_by_username
+from app.crud import create_user, get_user_by_username
 from app.db import get_db
 from app.schemas import User, UserCreate
 from fastapi import APIRouter, Depends, HTTPException
@@ -19,13 +19,13 @@ async def create(*, db: Session = Depends(get_db), user: UserCreate):
     return create_user(db, user=user)
 
 
-@router.get("/{user_id}", response_model=User)
-async def read(*, db: Session = Depends(get_db), user_id: int):
-    db_user = get_user(db, user_id)
+@router.get("/{username}", response_model=User)
+async def read(*, db: Session = Depends(get_db), username: str):
+    db_user = get_user_by_username(db, username)
 
     if db_user is None:
         raise HTTPException(
-            status_code=404, detail=f"User with the user id {user_id} does not exist."
+            status_code=404, detail=f"User with the username {username} does not exist."
         )
 
     return db_user

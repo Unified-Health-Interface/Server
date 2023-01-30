@@ -12,6 +12,6 @@ async def create(*, db: Session = Depends(get_db), allergy: AllergyCreate):
     return create_allergy(db, allergy=allergy)
 
 
-@router.get("/", response_model=list[Allergy])
-async def read(*, db: Session = Depends(get_db), user: UserIn):
-    return read_user_allergies(db, user)
+@router.get("/{username}", response_model=list[Allergy])
+async def read(*, db: Session = Depends(get_db), username: str):
+    return read_user_allergies(db, username)
