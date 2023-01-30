@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from app.schemas.allergy import Allergy
 from app.schemas.appointment import Appointment
 from app.schemas.basic_health import BasicHealth
+from app.schemas.prescription import Prescription
 from app.schemas.vaccination import Vaccination
 
 
@@ -14,6 +15,7 @@ class UserBase(BaseModel):
     vaccinations: list[Vaccination] | None = None
     basic_health: BasicHealth | None = None
     appointments: list[Appointment] | None = None
+    prescriptions: list[Prescription] | None = None
 
 
 class UserCreate(UserBase):
