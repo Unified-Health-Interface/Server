@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 
 from app.schemas.allergy import Allergy
+from app.schemas.appointment import Appointment
 from app.schemas.basic_health import BasicHealth
 from app.schemas.vaccination import Vaccination
-from app.schemas.appointment import Appointment
 
 
 class UserBase(BaseModel):
