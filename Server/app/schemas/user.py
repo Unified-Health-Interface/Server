@@ -13,7 +13,7 @@ class UserBase(BaseModel):
     allergies: list[Allergy] | None = None
     vaccinations: list[Vaccination] | None = None
     basic_health: BasicHealth | None = None
-    appointments: Appointment | None = None
+    appointments: list[Appointment] | None = None
 
 
 class UserCreate(UserBase):
