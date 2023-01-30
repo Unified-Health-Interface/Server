@@ -133,3 +133,6 @@ poetry.lock
 
 # Database
 UHI.db
+
+# Idea
+.idea/
