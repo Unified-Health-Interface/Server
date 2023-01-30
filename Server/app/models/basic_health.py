@@ -7,7 +7,7 @@ from app.db import Base
 
 
 class BasicHealth(Base):
-    __tablename__ = "vaccination"
+    __tablename__ = "basic_health"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, nullable=False)
     age: Mapped[int] = mapped_column(Integer)
