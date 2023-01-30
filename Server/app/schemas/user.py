@@ -5,6 +5,7 @@ from app.schemas.appointment import Appointment
 from app.schemas.basic_health import BasicHealth
 from app.schemas.prescription import Prescription
 from app.schemas.vaccination import Vaccination
+from app.schemas.bill import Bill
 
 
 class UserBase(BaseModel):
@@ -16,6 +17,7 @@ class UserBase(BaseModel):
     basic_health: BasicHealth | None = None
     appointments: list[Appointment] | None = None
     prescriptions: list[Prescription] | None = None
+    bills: list[Bill] | None = None
 
 
 class UserCreate(UserBase):
