@@ -17,4 +17,4 @@ class Bill(Base):
     due_date: Mapped[datetime.date] = mapped_column(Date)
     paid: Mapped[bool] = mapped_column(Boolean)
 
-    username: Mapped[str] = mapped_column(ForeignKey("users.username"), unique=True)
+    username: Mapped[str] = mapped_column(ForeignKey("users.username"))

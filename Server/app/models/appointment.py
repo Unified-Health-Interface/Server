@@ -13,4 +13,4 @@ class Appointment(Base):
     doctor: Mapped[str] = mapped_column(String)
     hospital: Mapped[str] = mapped_column(String)
     date_time: Mapped[datetime.datetime] = mapped_column(DateTime)
-    username: Mapped[str] = mapped_column(ForeignKey("users.username"), unique=True)
+    username: Mapped[str] = mapped_column(ForeignKey("users.username"))
