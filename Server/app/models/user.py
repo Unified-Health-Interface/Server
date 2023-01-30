@@ -16,3 +16,4 @@ class User(Base):
     basic_health: Mapped["BasicHealth"] = relationship()
     appointments: Mapped[list["Appointment"]] = relationship()
     prescriptions: Mapped[list["Prescription"]] = relationship()
+    bills: Mapped[list["Bill"]] = relationship()
