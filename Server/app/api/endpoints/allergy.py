@@ -1,8 +1,9 @@
-from app.crud import create_allergy, read_user_allergies
-from app.db import get_db
-from app.schemas import Allergy, AllergyCreate, UserIn
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+
+from app.crud import create_allergy, read_user_allergies
+from app.db import get_db
+from app.schemas import Allergy, AllergyCreate
 
 router = APIRouter()
 

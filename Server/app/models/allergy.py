@@ -1,6 +1,7 @@
-from app.db import Base
 from sqlalchemy import ForeignKey, Integer, String
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column
+
+from app.db import Base
 
 
 class Allergy(Base):
