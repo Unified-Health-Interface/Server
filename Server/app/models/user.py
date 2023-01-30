@@ -13,3 +13,4 @@ class User(Base):
 
     allergies: Mapped[list["Allergy"]] = relationship()
     vaccinations: Mapped[list["Vaccination"]] = relationship()
+    basic_health: Mapped["BasicHealth"] = relationship()
