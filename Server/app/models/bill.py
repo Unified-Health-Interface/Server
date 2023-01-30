@@ -11,6 +11,7 @@ class Bill(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, nullable=False)
 
+    hospital: Mapped[str] = mapped_column(String)
     service: Mapped[str] = mapped_column(String)
     amount: Mapped[int] = mapped_column(Integer)
     due_date: Mapped[datetime.date] = mapped_column(Date)
