@@ -4,6 +4,7 @@ from app.schemas.allergy import Allergy
 from app.schemas.appointment import Appointment
 from app.schemas.basic_health import BasicHealth
 from app.schemas.bill import Bill
+from app.schemas.emergency_contact import EmergencyContact
 from app.schemas.prescription import Prescription
 from app.schemas.vaccination import Vaccination
 
@@ -13,11 +14,12 @@ class UserBase(BaseModel):
     full_name: str | None = None
 
     allergies: list[Allergy] | None = None
-    vaccinations: list[Vaccination] | None = None
-    basic_health: BasicHealth | None = None
     appointments: list[Appointment] | None = None
-    prescriptions: list[Prescription] | None = None
+    basic_health: BasicHealth | None = None
     bills: list[Bill] | None = None
+    emergency_contacts: list[EmergencyContact] | None = None
+    prescriptions: list[Prescription] | None = None
+    vaccinations: list[Vaccination] | None = None
 
 
 class UserCreate(UserBase):
