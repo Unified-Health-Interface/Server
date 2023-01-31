@@ -5,7 +5,7 @@ from app import models, schemas
 
 def create_vaccination(db: Session, vaccination: schemas.VaccinationCreate):
     db_vaccination = models.Vaccination(username=vaccination.username, vaccine=vaccination.vaccine,
-                                        date=vaccination.date, done=vaccination.done)
+                                        date_time=vaccination.date_time, done=vaccination.done)
     db.add(db_vaccination)
     db.commit()
     db.refresh(db_vaccination)

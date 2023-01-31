@@ -5,13 +5,13 @@ from pydantic import BaseModel
 
 class VaccinationBase(BaseModel):
     vaccine: str | None = None
-    date: datetime.date | None = None
+    date_time: datetime.datetime | None = None
     done: bool | None = None
 
 
 class VaccinationCreate(VaccinationBase):
     vaccine: str
-    date: datetime.date
+    date_time: datetime.datetime
     username: str
     done: bool
 
