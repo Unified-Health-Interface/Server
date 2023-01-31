@@ -18,7 +18,7 @@ class UserBase(BaseModel):
     appointments: list[Appointment] | None = None
     basic_health: BasicHealth | None = None
     bills: list[Bill] | None = None
-    doctor_note: list[DoctorNote] | None = None
+    doctor_notes: list[DoctorNote] | None = None
     emergency_contacts: list[EmergencyContact] | None = None
     prescriptions: list[Prescription] | None = None
     vaccinations: list[Vaccination] | None = None
