@@ -6,7 +6,7 @@ from app import models, schemas
 def create_prescription(db: Session, prescription: schemas.PrescriptionCreate):
     db_prescription = models.Prescription(username=prescription.username, doctor=prescription.doctor,
                                           medicines=prescription.medicines,
-                                          date=prescription.date, done=prescription.done)
+                                          date_time=prescription.date_time, done=prescription.done)
     db.add(db_prescription)
     db.commit()
     db.refresh(db_prescription)
