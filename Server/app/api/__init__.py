@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
-from app.api.endpoints import allergy, appointment, user, basic_health, bill, doctor_note,emergency_contact, prescription, \
+from app.api.endpoints import allergy, appointment, user, basic_health, bill, doctor_note, emergency_contact, \
+    prescription, \
     vaccination
 
 api_router = APIRouter()
