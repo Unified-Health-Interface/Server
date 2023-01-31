@@ -1,15 +1,15 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 class EmergencyContactBase(BaseModel):
     name: str | None = None
-    email: str | None = None
+    email: EmailStr | None = None
     phone: str | None = None
 
 
 class EmergencyContactCreate(EmergencyContactBase):
     name: str
-    email: str
+    email: EmailStr
     phone: str
     username: str
 
