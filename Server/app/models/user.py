@@ -12,8 +12,9 @@ class User(Base):
     full_name: Mapped[str] = mapped_column(String, nullable=False)
 
     allergies: Mapped[list["Allergy"]] = relationship()
-    vaccinations: Mapped[list["Vaccination"]] = relationship()
-    basic_health: Mapped["BasicHealth"] = relationship()
     appointments: Mapped[list["Appointment"]] = relationship()
-    prescriptions: Mapped[list["Prescription"]] = relationship()
+    basic_health: Mapped["BasicHealth"] = relationship()
     bills: Mapped[list["Bill"]] = relationship()
+    emergency_contacts: Mapped[list["EmergencyContact"]] = relationship()
+    prescriptions: Mapped[list["Prescription"]] = relationship()
+    vaccinations: Mapped[list["Vaccination"]] = relationship()
