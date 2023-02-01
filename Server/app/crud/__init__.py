@@ -4,6 +4,7 @@ from app.crud.basic_health import create_basic_health, read_user_basic_health
 from app.crud.bill import create_bill, read_user_bill
 from app.crud.doctor_note import create_doctor_note, read_user_doctor_note
 from app.crud.emergency_contact import create_emergency_contact, read_user_emergency_contact
+from app.crud.notify_runner import create_notify_runner, read_user_notify_runner
 from app.crud.prescription import create_prescription, read_user_prescription
 from app.crud.user import create_user, get_user_by_username
 from app.crud.vaccination import create_vaccination, read_user_vaccinations
