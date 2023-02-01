@@ -17,5 +17,6 @@ class User(Base):
     bills: Mapped[list["Bill"]] = relationship()
     doctor_notes: Mapped[list["DoctorNote"]] = relationship()
     emergency_contacts: Mapped[list["EmergencyContact"]] = relationship()
+    notify_runner: Mapped["NotifyRunner"] = relationship()
     prescriptions: Mapped[list["Prescription"]] = relationship()
     vaccinations: Mapped[list["Vaccination"]] = relationship()
